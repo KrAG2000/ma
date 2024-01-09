@@ -15,7 +15,7 @@ app.use((req,res,next)=>{
 
 app.use('/',workrouters)
 
-mongoose.connect(`mongodb+srv://agni5kartik:K12Entre@cluster0.caiqbmp.mongodb.net/`)
+mongoose.connect(`${process.env.MONGO_URI}`)
 .then(()=>{
     app.listen(process.env.PORT, ()=>{
         console.log('server running  on ',process.env.PORT);
