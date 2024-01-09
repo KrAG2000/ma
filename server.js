@@ -13,7 +13,7 @@ app.use((req,res,next)=>{
 })
 
 
-app.use('/api/workouts',workrouters)
+app.use('/',workrouters)
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>{
